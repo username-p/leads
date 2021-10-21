@@ -381,7 +381,7 @@ const TrackedPageDetails = () => {
               variants={trackedPageVariants}
               className="no-data-found"
             >
-              <p>No clicks data found for this particular page</p>
+              <p>No scroll data found for this particular page</p>
             </motion.div>
           )
         ) : (

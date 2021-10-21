@@ -71,6 +71,7 @@ const Leads = () => {
         arr = arr.filter((lead) => lead.id !== id);
         setLeads(arr);
         setInitialLeads(arr);
+        setDeletePopup(null);
       })
       .catch((e) => {
         console.log(e);
@@ -284,7 +285,7 @@ const Leads = () => {
         <AnimatePresence exitBeforeEnter>
           {deletepopup && (
             <DeletePopUp
-              deleteItem={() => deleteLead(popup)}
+              deleteItem={() => deleteLead(deletepopup)}
               cancleOperation={() => setDeletePopup(0)}
               target="Delete this record"
               message="Are you sure you want to delete this record"
